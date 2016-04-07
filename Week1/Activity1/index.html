@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Activity 1</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p>First Name: <input type="text" ng-model="firstName"></p>
+        <p>First Name: <input type="text" ng-model="middleName"></p>
+        <p>First Name: <input type="text" ng-model="lastName"></p>
+        <h1>My name is: {{ firstName + " " + middleName + " " + lastName }}</h1>
+
+        <p>
+            Change the color of the input by typing a color into it.
+        </p>
+        <input ng-init="myCol='lightblue'" style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+
+    </div>
+
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.firstName= "First";
+        $scope.middleName= "Middle";
+        $scope.lastName= "Last";
+    });
+    </script>
+
+    <div ng-app="" ng-init="myCol='lightblue'">
+
+    </div>
+</body>
+</html>
