@@ -1,0 +1,27 @@
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    font-family: sans-serif;
+}
+
+form {
+    width: 40%;
+    margin: auto;
+}
+
+form input {
+    width: 68%;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+form button {
+    width: 25%;
+    font-size: 30px;
+    color: #666;
+}
+
+.remove {
+    background-color: orange;
+}
