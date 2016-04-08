@@ -4,25 +4,29 @@
         <meta charset="utf-8">
         <title>Matt's Grocery List</title>
         <link rel="stylesheet" href="css/style.css" type="text">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body ng-app="myApp">
         <div ng-controller="GroceryController">
-            <h1>Matt's Grocery List</h1>
+            <header>
+                <h1>Matt's Grocery List</h1>
+
+                <div>
+                    <form ng-submit="addItem()">
+                        <div>
+                            <input type="text" ng-model="newItem" placeholder="New things">
+                            <button type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </header>
+            <section id="list">
+            <p>"{{ newItem }}"</p>
 
             <div>
-                <form ng-submit="addItem()">
-                    <div>
-                        <input type="text" ng-model="newItem" placeholder="New things">
-                        <button type="submit">Save</button>
-                    </div>
-                </form>
-            </div>
-            <p>{{ newItem }}</p>
-
-            <div>
-                <h4>Items {{ groceries.length }}</h4>
+                <h4>{{ groceries.length }} total items</h4>
                 <table>
                     <tr ng-repeat="gro in groceries">
                         <td>{{gro}}</td>
@@ -32,6 +36,7 @@
                     </tr>
                 </table>
             </div>
+            </section>
         </div>
     </body>
 </html>
