@@ -21,6 +21,10 @@ h1 {
     padding-bottom: 60px;
 }
 
+#orange {
+    padding: 30px;
+}
+
 p {
     margin: auto;
     margin-top: 50px;
@@ -28,6 +32,8 @@ p {
     padding: 10px;
     font-size: 40px;
     background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 form {
@@ -52,7 +58,9 @@ form button {
    margin: auto;
    width: 80%;
    max-width: 1000px;
-   background-color: orange;
+   background-color: grey;
+   box-shadow: 5px 5px 10px black;
+   border-radius: 10px;
 }
 
 table {

@@ -11,6 +11,6 @@ app.controller('GroceryController', function($scope){
 
     $scope.removeItem = function(item) {
         var idx = $scope.groceries.indexOf(item);
-            $scope.groceries.splice(idx.l);
+            $scope.groceries.splice($scope.groceries.indexOf(item),1);
     }
 });
